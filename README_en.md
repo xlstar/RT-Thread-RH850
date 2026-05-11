@@ -1,3 +1,5 @@
+English | [中文](./README.md)
+
 # RH850 RT-Thread Nano Porting Project
 
 > A reference **RT-Thread Nano** porting project for the **Renesas RH850 G3KH** platform, built with the **Renesas CS+ / CC-RH** toolchain.

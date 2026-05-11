@@ -1,3 +1,5 @@
+[English](./README_en.md) | 中文
+
 # RH850 RT-Thread Nano 移植工程
 
 > 面向 **Renesas RH850 G3KH** 平台的 **RT-Thread Nano** 移植参考工程，使用 **Renesas CS+ / CC-RH** 工具链构建。
