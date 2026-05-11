@@ -1,0 +1,25 @@
+# Build outputs
+Debug/
+Release/
+Build/
+build/
+*.o
+*.obj
+*.elf
+*.map
+*.mot
+*.hex
+*.bin
+*.lst
+*.dep
+
+# IDE / local config
+.vscode/
+.idea/
+.settings/
+*.user
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,48 @@
+/* RT-Thread RH850/CC-RH configuration file */
+#ifndef __RTTHREAD_CFG_H__
+#define __RTTHREAD_CFG_H__
+
+#define RT_THREAD_PRIORITY_MAX          32
+#define RT_TICK_PER_SECOND              1000
+#define RT_ALIGN_SIZE                   4
+#define RT_NAME_MAX                     8
+#define RT_USING_LIBC
+
+#define RT_USING_USER_MAIN
+#define RT_MAIN_THREAD_STACK_SIZE       1024
+#define RT_MAIN_THREAD_PRIORITY         (RT_THREAD_PRIORITY_MAX - 1)
+
+#define RT_USING_SEMAPHORE
+#define RT_USING_MUTEX
+#define RT_USING_EVENT
+#define RT_USING_MAILBOX
+#define RT_USING_MESSAGEQUEUE
+
+#define RT_USING_HEAP
+#define RT_USING_SMALL_MEM
+#define RT_USING_SMALL_MEM_AS_HEAP
+#define RT_HEAP_SIZE                    (8 * 1024)
+
+/* Console is disabled by default because this reference project has no UART BSP. */
+/* #define RT_USING_CONSOLE */
+#define RT_CONSOLEBUF_SIZE              128
+
+/* Keep this Nano port minimal; enable only after CS+ linker section symbols are configured. */
+/* #define RT_USING_COMPONENTS_INIT */
+#define RT_DEBUG_INIT                   0
+
+/* #define RT_DEBUG */
+/* #define RT_USING_OVERFLOW_CHECK */
+/* #define RT_USING_HOOK */
+/* #define RT_USING_IDLE_HOOK */
+
+#define RT_USING_TIMER_SOFT             0
+#if RT_USING_TIMER_SOFT == 0
+#undef RT_USING_TIMER_SOFT
+#endif
+#define RT_TIMER_THREAD_PRIO            4
+#define RT_TIMER_THREAD_STACK_SIZE      512
+
+#define RT_USING_HW_US_DELAY_DEF
+
+#endif /* __RTTHREAD_CFG_H__ */

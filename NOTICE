@@ -1,0 +1,135 @@
+RH850 RT-Thread Nano Porting Project NOTICE
+============================================
+
+This NOTICE file summarizes copyright, attribution, third-party, and vendor
+license information for this repository. It does not replace the license terms
+contained in individual source files.
+
+1. Project-specific RH850 RT-Thread porting files
+-------------------------------------------------
+Unless otherwise stated in individual files, the RH850/CC-RH RT-Thread porting
+code, board support code, sample application code, and documentation added by
+this project are provided under the Apache License, Version 2.0.
+
+Typical files include, but are not limited to:
+
+- SourceFile/rtthread/board.c
+- SourceFile/rtthread/rtconfig.h
+- SourceFile/rtthread/rtthread_main.c
+- SourceFile/rtthread/libcpu/rh850/ccrh/cpuport.c
+- SourceFile/rtthread/libcpu/rh850/ccrh/context_ccrh.asm
+- doc/RH850G3KH_RTOS_Porting_Guide.md
+
+2. RT-Thread Nano kernel source code
+------------------------------------
+The RT-Thread kernel source files included under SourceFile/rtthread/core/ carry
+RT-Thread's original copyright notices and SPDX identifiers.
+
+Copyright (c) 2006-2021, RT-Thread Development Team
+Copyright (c) 2006-2022, RT-Thread Development Team
+SPDX-License-Identifier: Apache-2.0
+
+Please keep the original file headers when redistributing or modifying these
+files.
+
+3. lwIP-derived small memory allocator notice
+---------------------------------------------
+SourceFile/rtthread/core/src/mem.c includes code derived from the lwIP TCP/IP
+stack and retains the following notice in its source header:
+
+Copyright (c) 2001-2004 Swedish Institute of Computer Science.
+All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+   this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+3. The name of the author may not be used to endorse or promote products
+   derived from this software without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR IMPLIED
+WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT
+SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT
+OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING
+IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
+OF SUCH DAMAGE.
+
+4. DragonFly BSD-derived slab allocator notice
+----------------------------------------------
+SourceFile/rtthread/core/src/slab.c includes code derived from The DragonFly
+Project and retains the following notice in its source header:
+
+KERN_SLABALLOC.C - Kernel SLAB memory allocator
+
+Copyright (c) 2003,2004 The DragonFly Project. All rights reserved.
+
+This code is derived from software contributed to The DragonFly Project by
+Matthew Dillon <dillon@backplane.com>.
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+1. Redistributions of source code must retain the above copyright notice,
+   this list of conditions and the following disclaimer.
+2. Redistributions in binary form must reproduce the above copyright notice,
+   this list of conditions and the following disclaimer in the documentation
+   and/or other materials provided with the distribution.
+3. Neither the name of The DragonFly Project nor the names of its contributors
+   may be used to endorse or promote products derived from this software without
+   specific, prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS ``AS IS''
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDERS OR CONTRIBUTORS BE LIABLE
+FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY OR CONSEQUENTIAL
+DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
+TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+5. Renesas Electronics generated/supplied files
+-----------------------------------------------
+Files under SourceFile/System/Driver/cg_src/ and SourceFile/System/Driver/startup/
+include Renesas Code Generator / Smart Configurator output, startup files,
+I/O register definitions, and Renesas standard type definitions.
+
+These files retain their own Renesas copyright notices, disclaimers, and usage
+restrictions. They are not relicensed by this project under Apache-2.0.
+
+The repository currently contains files with notices such as:
+
+- Copyright (C) 2014-2016 Renesas Electronics Corporation. All rights reserved.
+- Copyright (C) 2015, 2018 Renesas Electronics Corporation. All rights reserved.
+- Software supplied by Renesas Electronics Corporation and intended for use with
+  Renesas products.
+
+Before publishing a public repository or distributing this package, please
+verify that the Renesas-generated/supplied files may be redistributed in your
+intended form. If redistribution is not permitted or is uncertain, publish only
+the RT-Thread RH850 porting layer and documentation, and instruct users to
+generate the Renesas startup, iodefine, and peripheral initialization files from
+the official Renesas tools for their own target device.
+
+6. Device/toolchain configuration notice
+----------------------------------------
+The CS+ project and generated code may contain device-specific configuration
+for RH850/F1K devices and may reference multiple device IDs in historical or
+generated metadata. Verify the actual target MCU, device file, interrupt vector,
+clock configuration, linker section layout, and debugger settings before use.
+
+7. General disclaimer
+---------------------
+This repository is provided as a reference porting example for RT-Thread Nano on
+Renesas RH850 G3KH/CC-RH platforms. Users are responsible for validating the
+software on their own hardware, compiler version, safety requirements, and
+production environment.
